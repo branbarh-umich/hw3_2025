@@ -81,25 +81,42 @@ first div in the grid and place it in the grid. */
   text-align: center;
 }
 
-/* [TODO] Desktop View */
+/* [DONE] Desktop View */
 
 /* Add your media query here */
 @media only screen and (min-width: 800px) {
   /* Step 9: Write the selector/rule property to style the nav element */
-
-  /* [TODO] Move the navigation so that the nav is aligned to the other side of the window and has a padding of 30px on the top and bottom and 0 on the left and right. */
+  nav {
+    text-align: right;
+    padding: 30px 0px;
+  }
 
   /* Step 10: Write the selector/rule property to update the .container class */
+  .container {
+    grid-template-columns: 50px auto 500px auto 50px;
+  }
 
-  /* [TODO] */
+  /* meowwwww :3 */
 
   /* Steps 11 and 12: Update the grid-column property of the grid's children (where-needed)*/
+  .about,
+  .clients,
+  .method-image,
+  .contact-image {
+    grid-column: 3 / span 2;
+  }
+  .method,
+  .contact,
+  .about-image,
+  .clients-image {
+    grid-column: 2 / span 2;
+  }
 
-  /* [TODO] */
-
-  /* Step 13:Write the selector/rule property to update the .text-block class */
-
-  /* [TODO] */
+  /* Step 13: Write the selector/rule property to update the .text-block class */
+  .text-block {
+    max-height: 250px;
+    overflow-y: auto;
+  }
 }
 
-/* [TODO] accessibility validation*/
+/* [TODO] accessibility validation */
